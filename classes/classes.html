@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes</title>
+  </head>
+  <body>
+    <script>
+      class carro {
+        constructor(marca, modelo, cor) {
+          this.modelo = modelo;
+          this.marca = marca;
+          this.cor = cor;
+          this.ligado = false;
+          this.km = 0;
+          this.comb = 10;
+        }
+
+        info() {
+          console.log(`Cor............: ${this.cor}`);
+          console.log(`Modelo.........: ${this.modelo}`);
+          console.log(`Marca..........: ${this.marca}`);
+          console.log(`Ligado.........: ${this.ligado ? "sim" : "não"}`);
+          console.log(`km.............: ${this.km}`);
+          console.log(`Combustivel....: ${this.comb}`);
+          console.log("----------------------------");
+        }
+
+        ligar() {
+          this.ligado = true;
+        }
+        desligado() {
+          this.ligado = false;
+        }
+
+        set combtotal(v) {
+          this.comb = v;
+        }
+
+        get combtotal() {
+          return this.comb;
+        }
+      }
+
+      let car1 = new carro("honda", "fiat", "rosa");
+      let car2 = new carro("xth", "bmw", "amarelo");
+      let car3 = new carro("gm", "holf", "azul");
+      let car4 = new carro("ferrari", "links", "preto");
+
+      car1.ligar();
+      car3.ligar();
+
+      car3.combtotal = 100;
+
+      console.log(car1.combtotal);
+
+      car1.info();
+      car2.info();
+      car3.info();
+      car4.info();
+    </script>
+  </body>
+</html>
