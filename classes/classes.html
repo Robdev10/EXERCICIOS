@@ -6,9 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Classes</title>
   </head>
+  <style>
+    .active {
+      background: red;
+    }
+  </style>
   <body>
+    <nav class="principal">Menu Principal</nav>
     <script>
+      class Menu {
+        constructor(menu) {
+          this.menuelement = document.querySelector(menu);
+        }
+
+        addActiveEvent() {
+          this.menuelement.addEventListener("click", function (event) {
+            event.target.classList.add("active");
+          });
+        }
+      }
+
+      const menu = new Menu(".principal");
+      menu.addActiveEvent();
+
+      console.log(menu);
+
       class carro {
+        static alerta = true;
         constructor(marca, modelo, cor) {
           this.modelo = modelo;
           this.marca = marca;
@@ -25,6 +49,7 @@
           console.log(`Ligado.........: ${this.ligado ? "sim" : "não"}`);
           console.log(`km.............: ${this.km}`);
           console.log(`Combustivel....: ${this.comb}`);
+          console.log(`Alerta....: ${carro.alerta ? "sim" : "não"}`);
           console.log("----------------------------");
         }
 
@@ -48,6 +73,8 @@
       let car2 = new carro("xth", "bmw", "amarelo");
       let car3 = new carro("gm", "holf", "azul");
       let car4 = new carro("ferrari", "links", "preto");
+
+      //carro.alerta = false;
 
       car1.ligar();
       car3.ligar();
