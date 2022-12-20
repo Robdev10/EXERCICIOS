@@ -13,13 +13,14 @@
   </style>
   <body>
     <nav class="principal">Menu Principal</nav>
+    <p class="clicou">Meu nome é Robson</p>
     <script>
       class Menu {
         constructor(menu) {
           this.menuelement = document.querySelector(menu);
         }
 
-        addActiveEvent() {
+        ativarevento() {
           this.menuelement.addEventListener("click", function (event) {
             event.target.classList.add("active");
           });
@@ -27,7 +28,10 @@
       }
 
       const menu = new Menu(".principal");
-      menu.addActiveEvent();
+      menu.ativarevento();
+
+      const rob = new Menu(".clicou");
+      rob.ativarevento();
 
       console.log(menu);
 
@@ -87,6 +91,12 @@
       car2.info();
       car3.info();
       car4.info();
+
+      const frutas = ["banana", "maça", "manga", "abacate", "limao"];
+
+      const [fruta1, fruta2, fruta3, fruta4, fruta5] = frutas;
+
+      console.log(fruta3, fruta5);
     </script>
   </body>
 </html>
