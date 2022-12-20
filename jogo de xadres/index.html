@@ -8,23 +8,78 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <table id="chessboard">
-      <tr>
-        <td id="a8" class="black square"></td>
-        <td id="b8" class="white square"></td>
-        <td id="c8" class="black square"></td>
-        <!-- ... -->
-      </tr>
-      <tr>
-        <td id="a7" class="white square"></td>
-        <td id="b7" class="black square"></td>
-        <td id="c7" class="white square"></td>
-        <!-- ... -->
-      </tr>
-      <!-- ... -->
-    </table>
+    <canvas id="game" width="800" height="600"></canvas>
 
-    <div id="message">Sua vez</div>
-    <script></script>
+    <img
+      src="./8fabf2eb407b715315a49f4c67ac4908.png"
+      id="nave"
+      style="position: absolute"
+    />
+    <img
+      src="./51cGTbMzsCL._AC_SX425_-removebg-preview.png"
+      id="tiro"
+      style="position: absolute"
+    />
+
+    <script>
+      // Variável para armazenar a imagem do tiro
+      var tiro;
+
+      // Função para atualizar o jogo
+      function update() {
+        // Move o tiro para cima
+        tiro.style.top = tiro.offsetTop - 10 + "px";
+
+        // Verifica se o tiro saiu da tela
+        var canvas = document.getElementById("game");
+        if (tiro.offsetTop < 0) {
+          // Remove o tiro da tela
+          tiro.remove();
+        }
+      }
+
+      // Adiciona um evento de mousemove ao documento
+      document.addEventListener("mousemove", function (event) {
+        // Atualiza a posição da nave de acordo com a posição do mouse
+        var nave = document.getElementById("nave");
+        var x = event.clientX;
+        var y = event.clientY;
+        var canvas = document.getElementById("game");
+        var canvasWidth = canvas.offsetWidth;
+        var canvasHeight = canvas.offsetHeight;
+
+        // Verifica se a nave está saindo da tela pelo lado esquerdo
+        if (x < 0) {
+          x = 0;
+        }
+        // Verifica se a nave está saindo da tela pelo lado direito
+        if (x > canvasWidth - nave.offsetWidth) {
+          x = canvasWidth - nave.offsetWidth;
+        }
+        // Verifica se a nave está saindo da tela pelo topo
+        if (y < 0) {
+          y = 0;
+        }
+        // Verifica se a nave está saindo da tela pelo fundo
+        if (y > canvasHeight - nave.offsetHeight) {
+          y = canvasHeight - nave.offsetHeight;
+        }
+
+        nave.style.left = x + "px";
+        nave.style.top = y + "px";
+      });
+
+      // Adiciona um evento de keydown ao documento
+      document.addEventListener("keydown", function (event) {
+        if (event.keyCode === 32) {
+          // Verifica se já existe um tiro na tela
+          if (!tiro) {
+            // Cria uma nova imagem de tiro
+            tiro = document.createElement("img");
+            tiro.src = "tiro";
+          }
+        }
+      });
+    </script>
   </body>
 </html>

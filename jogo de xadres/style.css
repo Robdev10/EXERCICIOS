@@ -1,33 +1,27 @@
-.square {
-  width: 50px;
-  height: 50px;
-}
-
-.black {
-  background-color: black;
-}
-
-.white {
-  background-color: white;
-}
-
-.piece {
-  width: 50px;
-  height: 50px;
-  background-image: url("pieces.png");
+body {
+  background-image: url("./terra-de-invasão-da-nave-espacial-estrangeira-124366957.jpg");
   background-size: cover;
 }
 
-.king {
-  background-position: 0 0;
+#nave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
 }
-
-.queen {
-  background-position: -50px 0;
+#placar,
+#vidas {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: white;
 }
-
-.bishop {
-  background-position: -100px 0;
+#tiro {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: yellow;
 }
-
-/* ... */
