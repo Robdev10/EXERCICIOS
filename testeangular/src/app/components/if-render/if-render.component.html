@@ -1,0 +1,10 @@
+<div class="class">
+  <h1>IF-RENDER</h1>
+  <h2 *ngIf="canshow">para testar o valor boleano</h2>
+  <h2 *ngIf="name === 'robson'; else noname">O nome é robson</h2>
+  <ng-template #noname>
+    <div>
+      <h2>o nome não está correto</h2>
+    </div>
+  </ng-template>
+</div>
