@@ -6,7 +6,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./change-number.component.scss'],
 })
 export class ChangeNumberComponent {
-  @Output() changenumber: EventEmitter<any> = new EventEmitter();
+  @Output() changenumber = new EventEmitter();
 
   constructor() {}
 
