@@ -11,4 +11,8 @@ export class FirstComponentComponent {
   job = 'programador';
 
   constructor() {}
+
+  nomecompleto() {
+    this.name = 'Robson Roberto do Carmo';
+  }
 }
