@@ -1,4 +1,12 @@
 <div class="class">
   <p *ngIf="show">Exibindo mensagem!</p>
   <button (click)="showmessage()">APARECE</button>
+
+  <p>{{ message }}</p>
+
+  <button (click)="showMessage()">Show Message</button>
+
+  <app-emitter [message]="message"></app-emitter>
+
+  <p>{{ message }}</p>
 </div>

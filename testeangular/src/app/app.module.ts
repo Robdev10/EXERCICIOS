@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponentComponent } from './components/first-component/first-component.component';
+//import { FirstComponentComponent } from './components/first-component/first-component.component';
 import { ParentDataComponent } from './component/parent-data/parent-data.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { IfRenderComponent } from './components/if-render/if-render.component';
@@ -18,7 +18,7 @@ import { TwoWay1Component } from './components/two-way1/two-way1.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponentComponent,
+    //FirstComponentComponent,
     ParentDataComponent,
     DirectivesComponent,
     IfRenderComponent,

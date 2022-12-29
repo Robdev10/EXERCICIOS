@@ -17,11 +17,11 @@ export class ListRenderComponent {
     { name: 'frida', type: 'house', age: 1 },
   ];
 
-  animal: Animal = {
+  /*animal: Animal = {
     name: 'teste',
     type: 'alguma coisa',
     age: 8,
-  };
+  };*/
 
   animaldetails = '';
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-emitter',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./emitter.component.scss'],
 })
 export class EmitterComponent {
+  @Input() message: string;
   constructor() {}
 
   mynumber: number = 0;
