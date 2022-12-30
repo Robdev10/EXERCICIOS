@@ -1,4 +1,10 @@
 <div class="class">
   <h1>o numero é: {{ mynumber }}</h1>
   <app-change-number (changenumber)="onchangenumber()"></app-change-number>
+
+  <p>{{ message }}</p>
+
+  <h2>Emitter</h2>
+
+  <button (click)="showMessage()">Show Message</button>
 </div>
