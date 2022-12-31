@@ -7,6 +7,6 @@ export class MyserviceService {
   constructor() {}
 
   getMessage(): string {
-    return 'Olá essa e a mensagem teste';
+    return 'Olá essa é a mensagem teste DIRETO DO SERVIÇO';
   }
 }

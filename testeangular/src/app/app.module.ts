@@ -14,6 +14,8 @@ import { ChangeNumberComponent } from './components/change-number/change-number.
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWay1Component } from './components/two-way1/two-way1.component';
+import { UsuaripaiComponent } from './components/usuaripai/usuaripai.component';
+import { UsuarifilhoComponent } from './components/usuarifilho/usuarifilho.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { TwoWay1Component } from './components/two-way1/two-way1.component';
     ListRenderComponent,
     PipesComponent,
     TwoWay1Component,
+    UsuaripaiComponent,
+    UsuarifilhoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
